@@ -39,5 +39,20 @@ source "https://rubygems.org"
 # live site deploy, which uses the Dockerfiles found in the publish-tools
 # branch.
 
-gem "github-pages", "198"
+# -----------------------------------------------------------------------
+
+if ENV['GITHUB_PAGES']
+  gem "github-pages", "198"
+else
+  if ENV['JEKYLL_FOUR']
+    gem 'jekyll', '~> 4.0'
+  else
+    gem 'jekyll', github: 'jekyll/jekyll'
+  end
+  gem 'jekyll-redirect-from'
+  gem 'jekyll-relative-links'
+  gem 'jekyll-sitemap'
+end
+
+gem 'memory_profiler'
 gem 'wdm' if Gem.win_platform?
