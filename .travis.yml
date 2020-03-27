@@ -1,0 +1,18 @@
+language: ruby
+rvm: 2.4
+cache: bundler
+script: bundle exec jekyll b -tV --profile
+env:
+  matrix:
+    - GITHUB_PAGES=true
+    - JEKYLL_FOUR=true
+    - JEKYLL_REPO=true
+matrix:
+  include:
+    - rvm: 2.4
+      env: JEKYLL_REPO=true
+      script: bundle exec ruby _scripts/memprof.rb
+      name: Profile Memory Usage
+before_install:
+  - gem update --system --no-document
+  - gem install bundler --no-document
