@@ -85,10 +85,10 @@ collections:
   samples:
     output: true
 
-plugins:
-  - jekyll-redirect-from
-  # - jekyll-relative-links
-  - jekyll-sitemap
+# plugins:
+#   - jekyll-redirect-from
+#   - jekyll-relative-links
+#   - jekyll-sitemap
 
 defaults:
   - scope:
