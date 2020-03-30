@@ -81,9 +81,9 @@ tablabels:
   kubectl: Kubernetes CLI
   cli: CLI
 
-collections:
-  samples:
-    output: true
+# collections:
+#   samples:
+#     output: true
 
 # plugins:
 #   - jekyll-redirect-from
