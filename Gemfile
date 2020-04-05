@@ -47,7 +47,7 @@ else
   if ENV['JEKYLL_FOUR']
     gem 'jekyll', '~> 4.0'
   else
-    gem 'jekyll', github: 'jekyll/jekyll'
+    gem 'jekyll', github: 'jekyll/jekyll', ref: 'refs/pull/8075/head'
   end
   gem 'jekyll-redirect-from'
   gem 'jekyll-relative-links'
