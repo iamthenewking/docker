@@ -55,4 +55,5 @@ else
 end
 
 gem 'memory_profiler'
+gem 'method_profiler'
 gem 'wdm' if Gem.win_platform?
