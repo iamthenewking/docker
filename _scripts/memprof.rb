@@ -4,7 +4,7 @@
 require 'memory_profiler'
 require 'jekyll'
 
-MemoryProfiler.report do
+MemoryProfiler.report(allow_files: '/lib/jekyll/') do
   Jekyll::Commands::Build.process(
     'source'      => File.expand_path('..', __dir__),
     'destination' => File.expand_path('../_site', __dir__),
