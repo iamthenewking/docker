@@ -1,9 +1,10 @@
 name: Docker Documentation
-kramdown:
-  gfm_quirks: [paragraph_end, no_auto_typographic]
-  html_to_native: true
-  syntax_highlighter: rouge
-  toc_levels: 2..3
+markdown: CommonMark
+# kramdown:
+#   gfm_quirks: [paragraph_end, no_auto_typographic]
+#   html_to_native: true
+#   syntax_highlighter: rouge
+#   toc_levels: 2..3
 # incremental: true
 permalink: pretty
 # This needs to have all the directories you expect to be in the archives (delivered by docs-base in the Dockerfile)
@@ -87,7 +88,8 @@ collections:
   samples:
     output: true
 
-# plugins:
+plugins:
+  - jekyll-commonmark
 #   - jekyll-redirect-from
 #   - jekyll-relative-links
 #   - jekyll-sitemap

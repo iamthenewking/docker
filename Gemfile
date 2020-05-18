@@ -54,6 +54,8 @@ else
   gem 'jekyll-sitemap'
 end
 
+gem "jekyll-commonmark"
+
 gem 'memory_profiler'
 gem 'method_profiler'
 gem 'wdm' if Gem.win_platform?
